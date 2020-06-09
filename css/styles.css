@@ -4,7 +4,12 @@
 }
 
 body {
-    background-color: #424242;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ),url('/img/bg3.png') no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 section {
@@ -16,38 +21,68 @@ section {
 }
 
 .search-container {
-    padding: 48px;
-    background: #4d4d4d;
-    width: 500px;
+    padding: 24px 48px 48px 48px;
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 500px;
     text-align: center;
-    height: 300px;
     border-radius: 8px;
+    transition: ease-in 600ms;
+}
+
+.search-container:hover {
+    box-shadow: 5px 5px 50px rgba(255, 255, 255, 0.1);
+
+}
+
+.search-container img {
+    width: 100px;
+}
+
+.search-container img:hover {
+    transform: scale(1.01);
+    
 }
 
 .search-container h1 {
     color: #fafafa;
 }
 
+.search-field {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .search-container input {
     padding: 12px;
     width: 300px;
-    margin-top: 24px;
     border-radius: 8px 0 0 8px;
-    border: none;
+    border: 1px solid rgb(72, 12, 112);
+    background: rgba(72, 12, 112, 0.3);
+    outline: none;
+    color: white;
+    transition: all 400ms;
+}
+.search-container input:hover {
+    background: rgba(132, 26, 202, 0.3);
 }
 
 .search-container button {
     border: none;
-    padding: 10px;
     border-radius: 0 8px 8px 0;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+    background: rgb(72, 12, 112);
+    color: white;
+    outline: none;
+    transition: all 400ms;
 }
 
-#repo-list {
-    transition: 400ms;
+.search-container button:hover {
+    background: rgb(132, 26, 202);
+
 }
+
 
 #repo-list ul {
     list-style: none;
@@ -56,6 +91,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
+    transition: all 400ms;
 }
 
 #repo-list ul li {
@@ -65,4 +101,19 @@ section {
     font-weight: bold;
     margin: 12px;
     border-radius: 8px;
+}
+
+
+@media (max-width: 486px) {
+    .search-container input {
+        border-radius: 8px;
+    }
+    .search-container button {
+        border-radius: 8px;
+        margin-top: 12px;
+        padding: 12px;
+    }
+    .search-field {
+        justify-content: center;
+    }
 }

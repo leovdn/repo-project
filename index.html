@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="bg-img"></div>
     <section>
         <div class="search-container">
-            <h1>Digite seu usuário</h1>
+            <img src="img/github-white.png" alt="">
+            <h1>Lista de Repositórios Github</h1>
             <div class="search-field">
-                <input type="text">
-                <button class="btn">Buscar</button>
+                <input type="text" placeholder="Insira seu username">
+                <button class="btn" onclick="setTimeout(smoothScroll, 800)">Buscar</button>
             </div>
         </div>
     </section>
     
-        <div id="repo-list">
+        <div id="repo-list" data-anime="scroll">
             <ul id="list"><ul>
         </div>    
 
