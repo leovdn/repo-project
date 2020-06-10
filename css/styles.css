@@ -4,10 +4,7 @@
 }
 
 body {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.6), 
-        rgba(0, 0, 0, 0.6)
-      ),url('/img/bg3.png') no-repeat fixed;
+    background: url('/img/bg3.png') no-repeat fixed;
     background-size: cover;
     height: 100vh;
 }
