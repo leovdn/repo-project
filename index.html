@@ -7,20 +7,26 @@
 </head>
 <body>
     <div class="bg-img"></div>
+    <div class="container">
+        
     <section>
-        <div class="search-container">
+        <div class="search-container" id="search-hide">
             <img src="img/github-white.png" alt="">
             <h1>Lista de Repositórios Github</h1>
-            <div class="search-field">
+            <div class="search-field" id="search">
                 <input type="text" placeholder="Insira seu username">
-                <button class="btn" onclick="setTimeout(smoothScroll, 800)">Buscar</button>
+                <button class="btn" onclick="setTimeout(smoothScroll, 400)">Buscar</button>
             </div>
         </div>
     </section>
     
-        <div id="repo-list" data-anime="scroll">
-            <ul id="list"><ul>
-        </div>    
+
+    <div id="repo-list" style="display:none" data-anime="scroll">
+        <ul id="list"><ul>
+    </div> 
+
+    </div>
+        
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

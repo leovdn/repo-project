@@ -4,9 +4,10 @@
 }
 
 body {
-    background: url('/img/bg3.png') no-repeat fixed;
+    background: url('/img/bg6.png') no-repeat fixed;
     background-size: cover;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 section {
@@ -14,30 +15,24 @@ section {
     align-items: center;
     justify-content: center;
     align-content: center;
-    height: 100%;
+    height: 100vh;
 }
+
+
+
 
 .search-container {
     padding: 24px 48px 48px 48px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.842);
+    width: 500px;
     max-width: 500px;
     text-align: center;
-    border-radius: 8px;
-    transition: ease-in 600ms;
-}
-
-.search-container:hover {
-    box-shadow: 5px 5px 50px rgba(255, 255, 255, 0.1);
-
+    border-radius: 4px;
+    transition: ease-in 200ms;
 }
 
 .search-container img {
     width: 100px;
-}
-
-.search-container img:hover {
-    transform: scale(1.01);
-    
 }
 
 .search-container h1 {
@@ -72,12 +67,25 @@ section {
     background: rgb(72, 12, 112);
     color: white;
     outline: none;
+    width: 100px;
     transition: all 400ms;
 }
 
 .search-container button:hover {
     background: rgb(132, 26, 202);
 
+}
+.search-fixed {
+    position: fixed;
+    top: 0;
+    background: rgba(132, 26, 202, 0.9 );
+    border-radius: 8px;
+    transition: ease-in 400ms;
+
+}
+
+.search-container-hide {
+    background: transparent;
 }
 
 
@@ -88,7 +96,8 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    transition: all 400ms;
+    transition: ease 200ms;
+    background: #fafafa2f;
 }
 
 #repo-list ul li {
@@ -97,7 +106,9 @@ section {
     padding: 16px;
     font-weight: bold;
     margin: 12px;
-    border-radius: 8px;
+    border-radius: 4px;
+    transition: ease 400ms;
+
 }
 
 

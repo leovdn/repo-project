@@ -2,7 +2,9 @@ const listElement = document.querySelector('ul');
 const inputElement = document.querySelector('input');
 const btnElement = document.querySelector('.btn');
 
+
 btnElement.addEventListener('click', listRepos);
+btnElement.addEventListener('click', showList);
 
 function showRepos(repos) {
     listElement.innerHTML = "";
@@ -51,5 +53,30 @@ function startAnimateScroll() {
         }
         animemateScroll();
         window.addEventListener('scroll', animemateScroll);
+    }
+}
+
+function showList() {
+    var display = document.getElementById('repo-list').style.display;
+    if (inputElement.value == "") {
+        document.getElementById('repo-list').style.display = 'none';
+    } else if (display == "none" && inputElement.value !== "") {
+      document.getElementById('repo-list').style.display = 'block';
+    } 
+}
+
+window.onscroll = function() {this.fixedSearch()};
+
+const search = document.getElementById('search');
+const searchContainer = document.getElementById('search-hide');
+const searchFixed = search.offsetTop;
+
+function fixedSearch() {
+    if(window.pageYOffset > searchFixed) {
+        search.classList.add('search-fixed');
+        searchContainer.classList.add('search-container-hide')
+    } else {
+        search.classList.remove('search-fixed');
+        searchContainer.classList.remove('search-container-hide')
     }
 }
