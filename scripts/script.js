@@ -3,6 +3,7 @@ const inputElement = document.querySelector('input');
 const btnElement = document.querySelector('.btn');
 
 
+btnElement.addEventListener('click', smoothScroll);
 btnElement.addEventListener('click', listRepos);
 btnElement.addEventListener('click', showList);
 
@@ -16,6 +17,8 @@ function showRepos(repos) {
         listElement.appendChild(liElement);
     }
 }
+
+
 
 function listRepos() {
 
@@ -31,8 +34,11 @@ function listRepos() {
 
 
 function smoothScroll() {
-    var smooth = document.getElementById('list');
-    smooth.scrollIntoView({block: "start", behavior: "smooth"});  
+    function smooth(){
+        var smooth = document.getElementById('list');
+        smooth.scrollIntoView({block: "start", behavior: "smooth"});  
+    }
+    setTimeout(smooth, 400);
 }
 
 

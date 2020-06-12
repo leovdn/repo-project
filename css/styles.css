@@ -78,14 +78,27 @@ section {
 .search-fixed {
     position: fixed;
     top: 0;
-    background: rgba(132, 26, 202, 0.9 );
     border-radius: 8px;
-    transition: ease-in 400ms;
+    transition: ease-in 600ms;
+    /* transform: scale(1.2); */
+    margin-top: 20px;
+    width: 600px;
+}
 
+.search-fixed input {
+    flex: 2;
+    transition: all 800ms;
+}
+.search-fixed button {    
+    flex: 1;
+    transition: ease 800ms;
 }
 
 .search-container-hide {
     background: transparent;
+    width: 600px;
+    max-width: 600px;
+    padding: 0;
 }
 
 
@@ -96,7 +109,8 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    transition: ease 200ms;
+    transition: ease 500ms;
+    border-radius: 4px;
     background: #fafafa2f;
 }
 
@@ -108,7 +122,7 @@ section {
     margin: 12px;
     border-radius: 4px;
     transition: ease 400ms;
-
+    cursor: pointer;
 }
 
 
