@@ -35,7 +35,7 @@ function listRepos() {
 
 function smoothScroll() {
     function smooth(){
-        var smooth = document.getElementById('list');
+        var smooth = document.getElementById('repo-list');
         smooth.scrollIntoView({block: "start", behavior: "smooth"});  
     }
     setTimeout(smooth, 400);

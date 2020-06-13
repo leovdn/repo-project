@@ -28,7 +28,8 @@ section {
     max-width: 500px;
     text-align: center;
     border-radius: 4px;
-    transition: ease-in 200ms;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+
 }
 
 .search-container img {
@@ -52,7 +53,6 @@ section {
     background: rgba(72, 12, 112, 0.3);
     outline: none;
     color: white;
-    transition: all 400ms;
 }
 .search-container input:hover {
     background: rgba(132, 26, 202, 0.3);
@@ -68,7 +68,6 @@ section {
     color: white;
     outline: none;
     width: 100px;
-    transition: all 400ms;
 }
 
 .search-container button:hover {
@@ -78,27 +77,50 @@ section {
 .search-fixed {
     position: fixed;
     top: 0;
-    border-radius: 8px;
-    transition: ease-in 600ms;
-    /* transform: scale(1.2); */
-    margin-top: 20px;
-    width: 600px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+    background: #000000fa;
+    animation: animateSearch 800ms;
+    z-index: 200;
 }
 
-.search-fixed input {
-    flex: 2;
-    transition: all 800ms;
-}
-.search-fixed button {    
-    flex: 1;
-    transition: ease 800ms;
-}
 
 .search-container-hide {
     background: transparent;
-    width: 600px;
-    max-width: 600px;
+    width: 100%;
+    max-width: 100%;
     padding: 0;
+    margin: 0;    
+}
+
+.search-container-hide h1 {
+    color: transparent;
+}
+
+@keyframes animateSearch {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+#repo-list {
+    scroll-margin: 128px;
+}
+
+#repo-list h1 {
+    text-align: center;
+    color: #fafafa;
+    margin-bottom: 64px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 
@@ -108,23 +130,30 @@ section {
     max-width: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
+    margin: 0px auto 260px auto;
     transition: ease 500ms;
     border-radius: 4px;
     background: #fafafa2f;
+    animation: animateSearch 200ms;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
 }
 
 #repo-list ul li {
     flex: 1;
-    background: #d5d5d5;
+    background: #d1d1d1;
     padding: 16px;
     font-weight: bold;
     margin: 12px;
     border-radius: 4px;
-    transition: ease 400ms;
+    transition: all 300ms;
     cursor: pointer;
+    animation: animateSearch 600ms;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
+#repo-list ul li:hover {
+    background: #ececec;    
+}
 
 @media (max-width: 486px) {
     .search-container input {
