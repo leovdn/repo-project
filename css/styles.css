@@ -4,8 +4,7 @@
 }
 
 body {
-    background: url('/img/bg6.png') no-repeat fixed;
-    background-size: cover;
+    background: linear-gradient(180deg, rgb(123, 54, 179), rgb(36, 15, 53));
     margin: 0;
     padding: 0;
 }
@@ -23,12 +22,12 @@ section {
 
 .search-container {
     padding: 24px 48px 48px 48px;
-    background: rgba(0, 0, 0, 0.842);
-    width: 500px;
+    background: linear-gradient(60deg, rgba(32, 32, 32, 0.842), rgb(32, 32, 32));
+    width: 100%;
     max-width: 500px;
     text-align: center;
     border-radius: 4px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 
 }
 
@@ -48,7 +47,7 @@ section {
 .search-container input {
     padding: 12px;
     width: 300px;
-    border-radius: 8px 0 0 8px;
+    border-radius: 4px 0 0 4px;
     border: 1px solid rgb(72, 12, 112);
     background: rgba(72, 12, 112, 0.3);
     outline: none;
@@ -60,7 +59,7 @@ section {
 
 .search-container button {
     border: none;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 4px 4px 0;
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
@@ -82,7 +81,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     padding: 12px;
-    background: #000000fa;
+    background: linear-gradient(60deg, rgba(32, 32, 32, 0.918), rgb(32, 32, 32));
     animation: animateSearch 800ms;
     z-index: 200;
 }
@@ -120,51 +119,62 @@ section {
     text-align: center;
     color: #fafafa;
     margin-bottom: 64px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000000a6;
 }
 
 
 #repo-list ul {
     list-style: none;
-    padding: 16px;
+    padding: 24px;
     max-width: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0px auto 260px auto;
     transition: ease 500ms;
     border-radius: 4px;
-    background: #fafafa2f;
+    background: linear-gradient(60deg, rgba(32, 32, 32, 0.842), rgb(32, 32, 32));
     animation: animateSearch 200ms;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 #repo-list ul li {
     flex: 1;
-    background: #d1d1d1;
+    background: #282a36;
+    color: #d1d1d1;
     padding: 16px;
     font-weight: bold;
     margin: 12px;
-    border-radius: 4px;
-    transition: all 300ms;
+    transition: ease-in-out 100ms;
     cursor: pointer;
     animation: animateSearch 600ms;
-    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #480c70;
+    border-radius: 4px 4px 0 0;
 }
 
 #repo-list ul li:hover {
-    background: #ececec;    
+    background: #3b3d47;
 }
 
-@media (max-width: 486px) {
-    .search-container input {
-        border-radius: 8px;
-    }
-    .search-container button {
-        border-radius: 8px;
-        margin-top: 12px;
-        padding: 12px;
-    }
+@media (max-width:512px) {
     .search-field {
-        justify-content: center;
+        width: 100%;
+    }
+    .search-field input {
+        flex: 1;
+    }
+    #repo-list ul {
+        grid-template-columns: 1fr;
+    }
+    #repo-list ul {
+        margin: 0 24px;
+    }
+}
+
+@media (max-width:386px) {
+    .search-container button {
+        flex: 0;
+    }
+    .search-container input {
+        width: 100%;
     }
 }
